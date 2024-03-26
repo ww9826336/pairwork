@@ -18,6 +18,8 @@ public class GenerateQuestion {
             String answer = ExpressionParsing.evaluate(expression).toString();
             questions.add(new Question(i, expression, answer));
         }
+        Save.saveQuestionsToFile(questions,"D:\\Exercises.txt");
+        Save.saveAnswerToFile(questions,"D:\\Answers.txt");
         return questions;
     }
 }
